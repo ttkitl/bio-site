@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website name here</title>
+<style>
+  /* Full-screen background */
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('sunset.jpg') no-repeat center center/cover;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Frosted glass box */
+  .frosted-box {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 60px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+
+  .frosted-box p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  }
+
+  .frosted-box a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: italic;
+  }
+
+  .frosted-box a:hover {
+    text-decoration: underline;
+  }
+
+  /* GitHub button */
+  .github-logo {
+    width: 80px; /* adjust size as needed */
+    margin-top: 20px;
+  }
+
+  .github-button {
+    display: block;
+    margin: 15px auto 0;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: none; /* GitHub dark color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .github-button:hover {
+    background-color: #444c56;
+  }
+</style>
+</head>
+<body>
+  <div class="frosted-box">
+    <p>
+      <b>Your contents</b> 
+      <b><a href="https://discord.com/users/902620008767717438" target="_blank">my user</a></b>
+    </p>
+
+    <!-- GitHub button -->
+    <a href="https://github.com/ttkitl" target="_blank" class="github-button">
+      <img src="GitHub.png" alt="GitHub Logo" class="github-logo">
+    </a>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    let started = false;
+
+    // Start music on first click anywhere
+    document.body.addEventListener('click', () => {
+      if (!started) {
+        music.play();
+        started = true;
+      }
+    });
+  </script>
+</body>
+</html>
